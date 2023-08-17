@@ -48,4 +48,10 @@ class ReceptionistController < ApplicationController
     def patient_params
       params.require(:patient_record).permit(:name, :age)
     end
+
+    def require_receptionist_role
+      unless current_user.receptionist?
+        redirect_to root_path, alert: "You don't have permission to access this page."
+      end
+    end
 end

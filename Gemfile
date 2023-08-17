@@ -76,3 +76,5 @@ gem 'pg'
 gem "chartkick", "~> 5.0"
 
 gem "groupdate", "~> 6.3"
+
+gem "devise", "~> 4.9"
