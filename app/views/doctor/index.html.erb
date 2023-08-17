@@ -1,4 +1,6 @@
-<h1>Hospital ke Doctor Portal me aapka swagat hai</h1>
+<h1>Hospital ke Doctor Portal me aapka swagat hai🙏</h1>
+<%= link_to "Check weekly graph", doctor_graph_path %>
+
 <h3>List of all Patients</h3>
 <% @patient_records.order(created_at: :asc).each do |patient| %>
     <div class="patient-data">
