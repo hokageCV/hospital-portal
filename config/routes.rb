@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # get "/patient/new", to: "patient#index", as: receptionist
+  get "/receptionist", to: "receptionist#new", as: :receptionist
+  post "/receptionist", to: "receptionist#create", as: :receptionist_create
 
   root "hospital#index"
 end
