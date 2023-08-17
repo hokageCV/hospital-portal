@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   delete "/receptionist/patients/:id/details", to: "receptionist#destroy", as: :delete_patient_details
   get "/receptionist/patients/:id", to: "receptionist#show", as: :patient_details
 
+  get "/doctor", to: "doctor#index", as: :doctor
+
   root "hospital#index"
 end
