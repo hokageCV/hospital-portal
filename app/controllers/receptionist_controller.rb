@@ -4,7 +4,7 @@ class ReceptionistController < ApplicationController
     @patient_records = PatientRecord.all
   end
 
-  
+
     def new
         @new_patient_record = PatientRecord.new
     end
@@ -16,6 +16,10 @@ class ReceptionistController < ApplicationController
         else
           render :new
         end
+    end
+
+    def show
+      @patient_record = PatientRecord.find(params[:id])
     end
 
     def edit
@@ -30,6 +34,13 @@ class ReceptionistController < ApplicationController
         render :edit
       end
     end
+
+    def destroy
+      @patient_record = PatientRecord.find(params[:id])
+      @patient_record.destroy
+      redirect_to receptionist_path, notice: "Patient record deleted successfully."
+    end
+    
   
     private
   
