@@ -1,0 +1,24 @@
+<h1>Hospital Employee Portal me aapka swagat hai</h1>
+<h3>List of all Patients</h3>
+<% @patients.each do |patient| %>
+    <div class="patient-data">
+        <h6><%= patient.name %><h6>
+        <p>Admitted on <%= patient.admit_on %> </p>
+    </div>
+<% end %>
+
+<style>
+    .patient-data{
+        margin: 20px 10px;
+
+        & h6{
+            font-size: 20px;
+            margin: 0;
+        }
+        
+        & p{
+            font-size: 15px;
+            margin: 0;
+        }
+    }
+</style>
