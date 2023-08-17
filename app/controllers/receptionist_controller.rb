@@ -2,6 +2,7 @@ class ReceptionistController < ApplicationController
 
   def index
     @patient_records = PatientRecord.all
+    @new_patient_record = PatientRecord.new
   end
 
 
