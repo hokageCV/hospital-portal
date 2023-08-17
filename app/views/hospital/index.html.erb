@@ -3,8 +3,8 @@
 <% @patient_records.order(created_at: :asc).each do |patient| %>
     <div class="patient-data">
         <h6><%= patient.name %><h6>
-        <p>Age <%= patient.age %> </p>
-         <p>Admitted on <%= patient.created_at.strftime("%B %d, %Y") %></p>
+        <p>Age:  <%= patient.age %> </p>
+        <p>Admitted on:  <%= patient.created_at.strftime("%d %B %Y") %></p>
     </div>
 <% end %>
 
