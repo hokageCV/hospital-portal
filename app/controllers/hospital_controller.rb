@@ -1,5 +1,5 @@
 class HospitalController < ApplicationController
     def index
-        @patients = Patient.all
+        @patient_records = PatientRecord.all
     end
 end
