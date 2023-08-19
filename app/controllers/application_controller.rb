@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def after_sign_in_path_for(resource)
+    # puts "🔥 Resource object yeh hai: #{resource.inspect}"
     if resource.receptionist?
       receptionist_path
     elsif resource.doctor?
